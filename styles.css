@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Shabnam';
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.woff2') format('woff2');
+}
+
+body {
+    font-family: 'Shabnam', sans-serif;
+}
+
+.cake:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.celebration.hidden {
+    display: none;
+}
+
+.balloon {
+    width: 60px;
+    height: 80px;
+    background: radial-gradient(circle, #9333ea, #6b21a8);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    animation: float 8s infinite ease-in-out;
+    transition: transform 0.3s;
+}
+
+.balloon:nth-child(2) {
+    background: radial-gradient(circle, #a1a1aa, #71717a);
+    animation-delay: 2s;
+}
+
+.balloon:nth-child(3) {
+    background: radial-gradient(circle, #d8b4fe, #a78bfa);
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}
+
+#confetti {
+    z-index: 5;
+}
